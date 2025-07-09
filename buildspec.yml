@@ -5,9 +5,9 @@ phases:
     runtime-versions:
       nodejs: 14
     commands:
-      - echo " Current location: $CODEBUILD_SRC_DIR"
+      - echo "Current location: $CODEBUILD_SRC_DIR"
       - cd $CODEBUILD_SRC_DIR
-      - echo " Files in repo:"
+      - echo "Files in repo:"
       - ls -al
       - echo "Creating output folder"
       - mkdir -p output
