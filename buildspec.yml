@@ -5,22 +5,9 @@ phases:
     runtime-versions:
       nodejs: 14
     commands:
-      - echo "Current location: $CODEBUILD_SRC_DIR"
-      - cd $CODEBUILD_SRC_DIR
-      - echo "Files in repo:"
+      - echo "Hello from AWS CodeBuild"
       - ls -al
-      - echo "Creating output folder"
-      - mkdir -p output
-      - echo "Copying files to output folder..."
-      - cp -v app.js output/ || echo "app.js not found"
-      - cp -v package.json output/ || echo "package.json not found"
-      - cp -v Procfile output/ || echo "Procfile not found"
-      - cp -v index.html output/ || echo "index.html not found"
-      - echo "Output folder contents:"
-      - ls -al output/
 
 artifacts:
   files:
     - '**/*'
-  base-directory: output
-  discard-paths: true
